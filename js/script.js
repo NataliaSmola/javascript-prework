@@ -14,20 +14,19 @@
     return 'nieznany ruch';
   }
   //computerMove
-  const randomNumber = Math.floor(Math.random() * 3 + 1);
-
-  console.log('Wylosowana liczba to: ' + randomNumber);
-
-  const argComputerMove = getMoveName(randomNumber);
+  const randomNumber = Math.floor(Math.random() * 3 + 1),
+        argComputerMove = getMoveName(randomNumber),
+        argPlayerMove = getMoveName(playerInput);
 
   printMessage('Mój ruch to: ' + argComputerMove);
-
+  printMessage('Twój ruch to: ' + argPlayerMove);
   // playerMove & prompt
+  console.log('Wylosowana liczba to: ' + randomNumber);
   console.log('Gracz wpisał: ' + playerInput);
 
-  const argPlayerMove = getMoveName(playerInput);
+  /*const argPlayerMove = getMoveName(playerInput);*/
 
-  printMessage('Twój ruch to: ' + argPlayerMove);
+
 
   // Game results
   const displayResult = function(argComputerMove, argPlayerMove) {
