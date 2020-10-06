@@ -1,4 +1,5 @@
-function playGame(playerInput) {
+{
+  function playGame(playerInput) {
   clearMessages();
   //GetMoveName
   function getMoveName(argMoveId) {
@@ -13,18 +14,18 @@ function playGame(playerInput) {
     return 'nieznany ruch';
   }
   //computerMove
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
-  let argComputerMove = getMoveName(randomNumber);
+  const argComputerMove = getMoveName(randomNumber);
 
   printMessage('Mój ruch to: ' + argComputerMove);
 
   // playerMove & prompt
   console.log('Gracz wpisał: ' + playerInput);
 
-  let argPlayerMove = getMoveName(playerInput);
+  const argPlayerMove = getMoveName(playerInput);
 
   printMessage('Twój ruch to: ' + argPlayerMove);
 
@@ -52,3 +53,4 @@ document.getElementById('play-paper').addEventListener('click', function() {
 document.getElementById('play-scissors').addEventListener('click', function() {
   playGame(3);
 });
+}
