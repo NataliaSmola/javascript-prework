@@ -1,8 +1,8 @@
 {
-  function playGame(playerInput) {
+  const playGame = function(playerInput) {
   clearMessages();
   //GetMoveName
-  function getMoveName(argMoveId) {
+  const getMoveName = function(argMoveId) {
     if (argMoveId == 1) {
       return 'kamień';
     } else if (argMoveId == 2) {
@@ -30,7 +30,7 @@
   printMessage('Twój ruch to: ' + argPlayerMove);
 
   // Game results
-  function displayResult(argComputerMove, argPlayerMove) {
+  const displayResult = function(argComputerMove, argPlayerMove) {
     console.log('moves:', argComputerMove, argPlayerMove);
     if (argComputerMove == argPlayerMove) {
       printMessage('Remis');
